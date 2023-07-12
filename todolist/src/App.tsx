@@ -1,4 +1,5 @@
 import React from 'react';
+import InputField from './components/InputField';
 import './App.css';
 
 const App: React.FC = () => {
@@ -7,6 +8,7 @@ const App: React.FC = () => {
       <span className="heading">
         Taskify!
       </span>
+      <InputField />
     </div>
   );
 }

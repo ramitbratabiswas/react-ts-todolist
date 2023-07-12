@@ -15,7 +15,7 @@
 }
 
 .input-box:focus {
-    box-shadow: 0 0 10px 1000px rgba(59, 102, 255, 0.675);
+    box-shadow: 0 0 10px 2px rgba(0, 197, 138, 0.769);
     outline: none;
 }
 
@@ -42,4 +42,42 @@
     width: 90%;
     color: black;
     flex-wrap: wrap;
+}
+
+.todos-single {
+    display: flex;
+    width: 28.5%;
+    border: 3px solid black;
+    padding: 20px;
+    margin-top: 15px;
+    background-color: rgb(81, 253, 195);
+}
+
+.todos-single-text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+.todos-single-text:hover {
+    outline: none;
+}
+
+.icon {
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .input {
+        width: 95%;
+    }
+    .todos {
+        width: 95%;
+    }
+    .todos-single {
+        width: 100%;
+    }
 }

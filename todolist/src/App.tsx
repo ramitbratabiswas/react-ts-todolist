@@ -24,7 +24,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <span className="heading">
-        Taskify!
+        {`myTodoList :)`}
       </span>
       <InputField 
         todo={todo}

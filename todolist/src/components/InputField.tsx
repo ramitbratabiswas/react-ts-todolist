@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import './styles.css';
 
 interface TodoProps {
@@ -8,10 +8,18 @@ interface TodoProps {
 }
 
 const InputField: React.FC<TodoProps> = ({todo, setTodo, handleAdd} : TodoProps) => {
+
+    const inputRef = useRef<HTMLInputElement>(null);
+
     return (
         <form className="input"
-            onSubmit={handleAdd}> 
+            onSubmit={(event) => {
+                    handleAdd(event);
+                    inputRef.current?.blur();
+                }
+            }> 
             <input type="text"
+                ref={inputRef}
                 value={todo}
                 onChange={(e) => setTodo(e.target.value)} 
                 placeholder="Your Task Here"

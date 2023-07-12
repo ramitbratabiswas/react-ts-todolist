@@ -1,6 +1,7 @@
 import React from "react";
 import './styles.css';
 import { Todo } from "../todo";
+import { TodoCard } from "./TodoCard";
 
 interface TodoListProps {
     todos: Todo[];
@@ -11,7 +12,10 @@ export const TodoList = ({ todos, setTodos } : TodoListProps) => {
     return (
         <div className="todos">
             {todos.map((todo) => (
-                <li>{todo.todo}</li>
+                <TodoCard
+                    todo={todo}
+                    todos={todos}
+                    setTodos={setTodos} />
             ))}
         </div>
     );

@@ -34,3 +34,12 @@
 .input-submit:hover {
     background-color: rgb(0, 78, 180);
 }
+
+.todos {
+    font-size: 22px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    color: black;
+    flex-wrap: wrap;
+}
